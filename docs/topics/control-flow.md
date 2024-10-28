@@ -53,7 +53,7 @@ assigning it to a variable, the `else` branch is mandatory.
 ## When expressions and statements
 
 `when` is a conditional expression that executes code based on multiple possible values or conditions. It is
-similar to the `switch` statement in C-like languages. For example:
+similar to the `switch` statement in Java, C, and similar languages. For example:
 
 ```kotlin
 fun main() {
@@ -62,9 +62,7 @@ fun main() {
     when (x) {
         1 -> print("x == 1")
         2 -> print("x == 2")
-        else -> {
-            print("x is neither 1 nor 2")
-        }
+        else -> print("x is neither 1 nor 2")
     }
     //sampleEnd
 }
@@ -75,7 +73,7 @@ fun main() {
 
 You can use `when` in a few different ways. Firstly, you can use `when` either as an **expression** or as a **statement**.
 As an expression, `when` returns a value that you can use later in your code. As a statement, `when` completes an action
-without returning anything:
+without returning anything of further use:
 
 <table>
    <tr>
@@ -86,13 +84,12 @@ without returning anything:
 <td>
 
 ```kotlin
-// Returns a string
-when (x) {
+// Returns a string assigned to the 
+// text variable
+val text = when (x) {
     1 -> "x == 1"
     2 -> "x == 2"
-    else -> {
-        "x is neither 1 nor 2"
-    }
+    else -> "x is neither 1 nor 2"
 }
 ```
 
@@ -105,9 +102,7 @@ when (x) {
 when (x) {
     1 -> print("x == 1")
     2 -> print("x == 2")
-    else -> {
-        print("x is neither 1 nor 2")
-    }
+    else -> print("x is neither 1 nor 2")
 }
 ```
 
